@@ -1,0 +1,1058 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    Smart Home box    [CS Open CourseWare]
+  </title>
+
+  <meta name="generator" content="DokuWiki">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2024-05-30T23:53:29+0300">
+<meta name="keywords" content="pm,prj2024,vstoica,dragos.coscodan">
+<link rel="search" type="application/opensearchdescription+xml" href="https://ocw.cs.pub.ro/courses/lib/exe/opensearch.php" title="CS Open CourseWare">
+<link rel="start" href="https://ocw.cs.pub.ro/courses/">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="https://ocw.cs.pub.ro/courses/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="https://ocw.cs.pub.ro/courses/feed.php?mode=list&amp;ns=pm:prj2024:vstoica">
+<link rel="alternate" type="text/html" title="Plain HTML" href="https://ocw.cs.pub.ro/courses/_export/xhtml/pm/prj2024/vstoica/dragos.coscodan">
+<link rel="canonical" href="http://ocw.cs.pub.ro/courses/pm/prj2024/vstoica/dragos.coscodan">
+<link rel="stylesheet" type="text/css" href="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/css.css">
+<script type="text/javascript">/*<![CDATA[*/var NS='pm:prj2024:vstoica';var JSINFO = {"id":"pm:prj2024:vstoica:dragos.coscodan","namespace":"pm:prj2024:vstoica","isadmin":0,"isauth":0};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/js.php"></script>
+<script type="text/x-mathjax-config;executed=true">/*<![CDATA[*/MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+        displayMath: [ ["$$","$$"], ["\\[","\\]"] ],
+        processEscapes: true
+    }
+});
+/*!]]>*/</script>
+<script src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/MathJax.js" id=""></script>
+<script type="text/javascript">/*<![CDATA[*/
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		  
+/*!]]>*/</script><script src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">/*<![CDATA[*/
+var pageTracker = _gat._getTracker("UA-38383934-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+		  
+/*!]]>*/</script>
+
+  <link rel="shortcut icon" href="https://ocw.cs.pub.ro/courses/lib/tpl/arctic/images/favicon.ico">
+
+  
+<link href="data:text/css,%3Ais(%5Bid*%3D'google_ads_iframe'%5D%2C%5Bid*%3D'taboola-'%5D%2C.taboolaHeight%2C.taboola-placeholder%2C%23credential_picker_container%2C%23credentials-picker-container%2C%23credential_picker_iframe%2C%5Bid*%3D'google-one-tap-iframe'%5D%2C%23google-one-tap-popup-container%2C.google-one-tap-modal-div%2C%23amp_floatingAdDiv%2C%23ez-content-blocker-container)%20%7Bdisplay%3Anone!important%3Bmin-height%3A0!important%3Bheight%3A0!important%3B%7D" rel="stylesheet" type="text/css"><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body><div id="MathJax_Message" style="display: none;"></div>
+<div id="wrapper" class="show">
+  <div class="dokuwiki">
+
+    
+    <div class="stylehead">
+      <div class="header">
+        <div class="pagename">
+          <a href="https://ocw.cs.pub.ro/courses/pm/"><img height="70" src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/sigla_pm.png"> </a>        </div>
+        <div class="logo">
+          <a style="color: #AAA !important;" href="https://ocw.cs.pub.ro/courses/">Open CourseWare</a>        </div>
+      </div>
+    
+       
+      <div class="breadcrumbs">
+              </div>
+      
+            </div>
+
+                  <div class="bar" id="bar__top">
+        <div class="bar-left">
+                  </div>
+        <div class="bar-right">
+          <a href="https://ocw.cs.pub.ro/courses/pm/prj2024/vstoica/dragos.coscodan?do=recent" class="action recent" accesskey="r" rel="nofollow" title="Recent changes [R]">Recent changes</a><a href="https://ocw.cs.pub.ro/courses/pm/prj2024/vstoica/dragos.coscodan?do=login&amp;sectok=f3ba3bf875e3eba6f98d7c4c93e9d742" class="action login" rel="nofollow" title="Login">Login</a>        </div>
+    </div>
+        
+    
+    
+    
+              <div class="left_page">
+          
+<h1 class="sectionedit1" id="smart_home_box">Smart Home box</h1>
+<div class="level1">
+
+</div>
+
+<h2 class="sectionedit2" id="introducere">Introducere</h2>
+<div class="level2">
+
+<p>
+<strong>Prezentare succinta proiect:</strong>
+</p>
+
+<p>
+Proiectul consta in realizarea unui sistem de control al luminilor si al
+ prizelor. Monitorizare consum curent, temperatura, umiditate, calitate 
+aer. Deschiderea ușii se va realiza prin introducerea unei parole pe un 
+keypad sau folosind un card rfid. Controlul si monitorizarea se va face 
+de pe o aplicația realizata in flutter si folosind o telecomandă ir. Va 
+conține o cameră esp-cam, care va fi controlata cu doua servomotoare. 
+Alarma se va activa atunci când pătrunde cineva in casa fără sa 
+introducă parola/cardul sau când calitatea aerului este foarte rea. 
+Pentru controlul intensității luminii am creat un dimmer ce folosește 
+pwm, luminile pot fi controlate si bătând din palme, de la telecomanda 
+sau din aplicație. De asemenea putem seta o anumita ora/interval sau 
+atunci când intensitatea luminii scade sub un anumit nivel când sa se 
+aprindă/stingă luminile.
+</p>
+
+<p>
+<strong>De ce este util un astfel de proiect ?</strong>
+</p>
+
+<p>
+Prin simplificarea excesivă a proceselor obositoare și obișnuite 
+întâlnite în casele tradiționale, aceasta aduce un nivel de confort și 
+eficiență care poate să nu fie experimentat în altă parte. De exemplu, 
+prin integrarea tehnologiilor inteligente și a automatizării, sarcinile 
+precum controlul temperaturii, securitatea locuinței sau gestionarea 
+energiei sunt gestionate în mod automat și convenabil. Aceste facilități
+ nu numai că economisesc timp și efort, dar și oferă un sentiment de 
+confort și siguranță, lăsându-i pe locatari să se concentreze pe alte 
+aspecte ale vieții lor.
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="descriere_generala">Descriere generală</h2>
+<div class="level2">
+
+<p>
+<strong>Main Box :</strong>
+</p>
+
+<p>
+Aceasta este cutia principala care se va conecta la automatele din casa 
+pentru controlul prizelor, becurilor, masurare curent, interactionare cu
+ baza de date.
+</p>
+
+<p>
+<a href="https://ocw.cs.pub.ro/courses/_detail/pm/prj2024/vstoica/dragos.coscodan.main_box.png?id=pm%3Aprj2024%3Avstoica%3Adragos.coscodan" class="media" title="pm:prj2024:vstoica:dragos.coscodan.main_box.png"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/dragos.coscodan.main_box.png" class="media" alt="" width="400"></a>
+</p>
+
+<p>
+<strong>Box 1</strong>
+Aceasta este prima cutie care se va monta intr-o camera si care contine mai multi senzori pentru monitorizare si control.
+Ea va comunica direct cu placuta principala utilizand pinii GPIO.
+</p>
+
+<p>
+<a href="https://ocw.cs.pub.ro/courses/_detail/pm/prj2024/vstoica/dragos.coscodan.box_1.1.png?id=pm%3Aprj2024%3Avstoica%3Adragos.coscodan" class="media" title="pm:prj2024:vstoica:dragos.coscodan.box_1.1.png"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/dragos.coscodan.box_1.1.png" class="media" alt="" width="400"></a>
+</p>
+
+<p>
+<strong>Box 2</strong>
+</p>
+
+<p>
+Este la fel ca prima cutie numai ca comunica prin wifi.
+</p>
+
+<p>
+<a href="https://ocw.cs.pub.ro/courses/_detail/pm/prj2024/vstoica/dragos.coscodan.box_2.1.png?id=pm%3Aprj2024%3Avstoica%3Adragos.coscodan" class="media" title="pm:prj2024:vstoica:dragos.coscodan.box_2.1.png"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/dragos.coscodan.box_2.1.png" class="media" alt="" width="400"></a>
+</p>
+
+<p>
+<strong>Door Lock Box</strong>
+</p>
+
+<p>
+Usa va putea fi deschisa folosind cardul sau introducand parola pe un 
+keypad. Din meniul acestuia putem schimba parola, schimba limba, 
+adauga/sterge carduri. Datele sunt salvate in EEPROM. Pentru a detecta 
+daca usa a fost deschisa voi folosi un Sensor Hall.
+Interfonul va comunica cu placuta principala prin UART pentru a trimite 
+semnale de alarma.
+</p>
+
+<p>
+<a href="https://ocw.cs.pub.ro/courses/_detail/pm/prj2024/vstoica/dragos.coscodan.interphone.png?id=pm%3Aprj2024%3Avstoica%3Adragos.coscodan" class="media" title="pm:prj2024:vstoica:dragos.coscodan.interphone.png"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/dragos.coscodan.interphone.png" class="media" alt="" width="400"></a>
+</p>
+
+<p>
+<strong>Esp-cam</strong>
+</p>
+
+<p>
+Este o camera directia careia va fi controlata cu 2 servo-motoare.
+</p>
+
+<p>
+<a href="https://ocw.cs.pub.ro/courses/_detail/pm/prj2024/vstoica/dragos.coscodan.esp-cam.png?id=pm%3Aprj2024%3Avstoica%3Adragos.coscodan" class="media" title="pm:prj2024:vstoica:dragos.coscodan.esp-cam.png"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/dragos.coscodan.esp-cam.png" class="media" alt="" width="400"></a>
+</p>
+
+</div>
+
+<h2 class="sectionedit4" id="hardware_design">Hardware Design</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit5" id="lista_piese">Lista piese:</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Esp32 x2</div>
+</li>
+<li class="level1"><div class="li"> Esp-cam </div>
+</li>
+<li class="level1"><div class="li"> Arduino Nano</div>
+</li>
+<li class="level1"><div class="li"> Placa PCB prototipare</div>
+</li>
+<li class="level1"><div class="li"> Relee x4</div>
+</li>
+<li class="level1"><div class="li"> Header pini</div>
+</li>
+<li class="level1"><div class="li"> Conectori XH2.54</div>
+</li>
+<li class="level1"><div class="li"> Conectori screw-in x20</div>
+</li>
+<li class="level1"><div class="li"> Convertor 220V-5V</div>
+</li>
+<li class="level1"><div class="li"> Current sensor CT 013</div>
+</li>
+<li class="level1"><div class="li"> LEDs x3</div>
+</li>
+<li class="level1"><div class="li"> Cablu UTP ~1m</div>
+</li>
+<li class="level1"><div class="li"> Cablu eletric 2.5mm ~2m</div>
+</li>
+<li class="level1"><div class="li"> Power button</div>
+</li>
+<li class="level1"><div class="li"> Fotorezistori x2</div>
+</li>
+<li class="level1"><div class="li"> Telecomanda IR</div>
+</li>
+<li class="level1"><div class="li"> Sensor IR x2</div>
+</li>
+<li class="level1"><div class="li"> Sensor DHT11 x2</div>
+</li>
+<li class="level1"><div class="li"> Buzzer x2</div>
+</li>
+<li class="level1"><div class="li"> Sensor MQ-2 x2</div>
+</li>
+<li class="level1"><div class="li"> Microfon x2</div>
+</li>
+<li class="level1"><div class="li"> Acumulator 18650 x2</div>
+</li>
+<li class="level1"><div class="li"> Convertor Step-Up</div>
+</li>
+<li class="level1"><div class="li"> Modul incarcare</div>
+</li>
+<li class="level1"><div class="li"> LCD 16×2</div>
+</li>
+<li class="level1"><div class="li"> Keypad</div>
+</li>
+<li class="level1"><div class="li"> Servo-motor x3</div>
+</li>
+<li class="level1"><div class="li"> Sensor Hall</div>
+</li>
+<li class="level1"><div class="li"> Magneti</div>
+</li>
+<li class="level1"><div class="li"> Modul RFID</div>
+</li>
+<li class="level1"><div class="li"> MOSFET</div>
+</li>
+<li class="level1"><div class="li"> Punte redresoare</div>
+</li>
+<li class="level1"><div class="li"> Condensator 100uF</div>
+</li>
+<li class="level1"><div class="li"> Dioda Zenner 15V</div>
+</li>
+<li class="level1"><div class="li"> Dioda</div>
+</li>
+<li class="level1"><div class="li"> Resistori 100k, 10k, 330, 220</div>
+</li>
+<li class="level1"><div class="li"> Optocoupler</div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit6" id="scheme_electrice">Scheme electrice</h3>
+<div class="level3">
+
+<p>
+<strong>Schematics:</strong>
+</p>
+
+<p>
+<a href="https://github.com/Dragosh-C/Smart-Home-Box/blob/main/Main_box_2_schem.png" class="urlextern" title="https://github.com/Dragosh-C/Smart-Home-Box/blob/main/Main_box_2_schem.png" rel="nofollow">Main_box + Box1</a>
+</p>
+
+<p>
+<a href="https://github.com/Dragosh-C/Smart-Home-Box/blob/main/interphone%2Bcamera_schem.png" class="urlextern" title="https://github.com/Dragosh-C/Smart-Home-Box/blob/main/interphone%2Bcamera_schem.png" rel="nofollow">Interfon + Camera</a>
+</p>
+
+<p>
+<a href="https://github.com/Dragosh-C/Smart-Home-Box/blob/main/Main_box_2_schem.png" class="urlextern" title="https://github.com/Dragosh-C/Smart-Home-Box/blob/main/Main_box_2_schem.png" rel="nofollow">Box 2</a>
+</p>
+
+</div>
+
+<h4 id="main_box_box_1">Main Box + Box 1</h4>
+<div class="level4">
+
+<p>
+<a href="https://ocw.cs.pub.ro/courses/_detail/pm/prj2024/vstoica/main_box_box1.dragos.coscodan.png?id=pm%3Aprj2024%3Avstoica%3Adragos.coscodan" class="media" title="pm:prj2024:vstoica:main_box_box1.dragos.coscodan.png"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/main_box_box1.dragos.coscodan.png" class="media" alt="" width="400"></a>
+</p>
+
+<p>
+<a href="https://ocw.cs.pub.ro/courses/_detail/pm/prj2024/vstoica/dragos.coscodan_main_box1.jpg?id=pm%3Aprj2024%3Avstoica%3Adragos.coscodan" class="media" title="pm:prj2024:vstoica:dragos.coscodan_main_box1.jpg"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/dragos.coscodan_main_box1.jpg" class="media" alt="" width="400"></a>
+</p>
+
+<p>
+<a href="https://ocw.cs.pub.ro/courses/_detail/pm/prj2024/vstoica/dragos.coscodan_box1.jpg?id=pm%3Aprj2024%3Avstoica%3Adragos.coscodan" class="media" title="pm:prj2024:vstoica:dragos.coscodan_box1.jpg"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/dragos.coscodan_box1.jpg" class="media" alt="" width="400"></a>
+</p>
+
+</div>
+
+<h4 id="interfon_camera">Interfon + Camera</h4>
+<div class="level4">
+
+<p>
+<a href="https://ocw.cs.pub.ro/courses/_detail/pm/prj2024/vstoica/dragos.coscodan.interphone_camera_bb.png?id=pm%3Aprj2024%3Avstoica%3Adragos.coscodan" class="media" title="pm:prj2024:vstoica:dragos.coscodan.interphone_camera_bb.png"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/dragos.coscodan.interphone_camera_bb.png" class="media" alt="" width="400"></a>
+</p>
+
+<p>
+<a href="https://ocw.cs.pub.ro/courses/_detail/pm/prj2024/vstoica/dragos.coscodan_lock1.jpg?id=pm%3Aprj2024%3Avstoica%3Adragos.coscodan" class="media" title="pm:prj2024:vstoica:dragos.coscodan_lock1.jpg"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/dragos.coscodan_lock1.jpg" class="media" alt="" width="400"></a>
+</p>
+
+<p>
+<a href="https://ocw.cs.pub.ro/courses/_detail/pm/prj2024/vstoica/dragos.coscoan_lock2.jpg?id=pm%3Aprj2024%3Avstoica%3Adragos.coscodan" class="media" title="pm:prj2024:vstoica:dragos.coscoan_lock2.jpg"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/dragos.coscoan_lock2.jpg" class="media" alt="" width="400"></a>
+</p>
+
+<p>
+<a href="https://ocw.cs.pub.ro/courses/_detail/pm/prj2024/vstoica/dragos.coscodan_camera.jpg?id=pm%3Aprj2024%3Avstoica%3Adragos.coscodan" class="media" title="pm:prj2024:vstoica:dragos.coscodan_camera.jpg"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/dragos.coscodan_camera.jpg" class="media" alt="" width="400"></a>
+</p>
+
+</div>
+
+<h4 id="box_2">Box 2</h4>
+<div class="level4">
+
+<p>
+<a href="https://ocw.cs.pub.ro/courses/_detail/pm/prj2024/vstoica/dragos.coscodan.box2.png?id=pm%3Aprj2024%3Avstoica%3Adragos.coscodan" class="media" title="pm:prj2024:vstoica:dragos.coscodan.box2.png"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/dragos.coscodan.box2.png" class="media" alt="" width="400"></a>
+</p>
+
+<p>
+<a href="https://ocw.cs.pub.ro/courses/_detail/pm/prj2024/vstoica/dragos.coscodan.box2.1.jpg?id=pm%3Aprj2024%3Avstoica%3Adragos.coscodan" class="media" title="pm:prj2024:vstoica:dragos.coscodan.box2.1.jpg"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/dragos.coscodan.box2.1.jpg" class="media" alt="" width="400"></a>
+</p>
+
+<p>
+<a href="https://ocw.cs.pub.ro/courses/_detail/pm/prj2024/vstoica/dragos.coscodan.box2.2.jpg?id=pm%3Aprj2024%3Avstoica%3Adragos.coscodan" class="media" title="pm:prj2024:vstoica:dragos.coscodan.box2.2.jpg"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/dragos.coscodan.box2.2.jpg" class="media" alt="" width="400"></a>
+</p>
+
+</div>
+
+<h2 class="sectionedit7" id="software_design">Software Design</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit8" id="descrierea_codului_aplicatiei">Descrierea codului aplicaţiei:</h3>
+<div class="level3">
+
+<p>
+</p><p></p><div class="notetip">
+<p></p>
+
+<p>
+<strong> Medii de dezvoltare:</strong>
+</p>
+<pre class="code">  VS Code - Platformio : Programare placute
+  Android-Studio: Aplicatie telefon </pre>
+
+<p>
+<strong>Biblioteci utilizate:</strong>
+</p>
+<pre class="code">  WiFi.h
+  Adafruit_Sensor.h
+  EmonLib.h
+  driver/adc.h
+  Firebase_ESP_Client.h
+  addons/TokenHelper.h
+  IRremote.h
+  SPI.h
+  MFRC522.h
+  EEPROM.h</pre>
+
+<p>
+
+</p></div><p></p>
+<p></p>
+
+</div>
+
+<h4 id="baza_de_date">Baza de date</h4>
+<div class="level4">
+
+<p>
+Baza de date folosita pentru a stoca informatia si pentru a comunica cu telefonul este Firebase
+</p>
+
+<p>
+<a href="https://ocw.cs.pub.ro/courses/_detail/pm/prj2024/vstoica/dragos.coscodan_firebase.png?id=pm%3Aprj2024%3Avstoica%3Adragos.coscodan" class="media" title="pm:prj2024:vstoica:dragos.coscodan_firebase.png"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/dragos.coscodan_firebase.png" class="media" alt="" width="400"></a>
+</p>
+
+</div>
+
+<h5 id="comunicare_esp_cu_baza_de_date">Comunicare esp cu baza de date:</h5>
+<div class="level5">
+<pre class="code">  FirebaseAuth auth;
+  FirebaseConfig config;
+  FirebaseData fbdo;</pre>
+<pre class="code">  ................ (autentificare si initializare)</pre>
+
+<p>
+<strong>Trimitere BD:</strong>
+</p>
+<pre class="code"> Firebase.RTDB.setInt(&amp;fbdo, "Main_box/power_measure", mainBox.power_measure)</pre>
+
+<p>
+<strong>Citire BD:</strong>
+</p>
+<pre class="code"> Firebase.RTDB.readStream(&amp;fbddo_light_intensity)</pre>
+<pre class="code"> if (fbdo_light_intensity.streamAvailable()) {
+    if (fbdo_light_intensity.dataType() == "int")
+    {
+      mainBox.light_intensity = fbdo_light_intensity.intData();
+    } 
+  }</pre>
+
+</div>
+
+<h5 id="comunicare_aplicatie_cu_baza_de_date">Comunicare aplicatie cu baza de date:</h5>
+<div class="level5">
+<pre class="code">private DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+database.addValueEventListener(new ValueEventListener() {
+          public void onDataChange(final DataSnapshot dataSnapshot) {
+          
+              // Citire BD
+              Long temperature = (Long) dataSnapshot.child("Room2").child("Temperature").getValue();
+              Long gassensor = (Long) dataSnapshot.child("Room2").child("Gas_sensor_value").getValue();
+              
+              // Scriere BD
+              dataSnapshot.getRef().child("Room2").child("Relay1").setValue(true);
+}</pre>
+
+</div>
+
+<h5 id="functie_stingereaprindere_lumina_batand_din_palme">Functie stingere/aprindere lumina batand din palme</h5>
+<div class="level5">
+
+<p>
+Functia verifica daca au fost exact 2 batai intr-un anumit interval de timp
+</p>
+<pre class="code">void claps_function(int sensorPin, bool *signalToRelayPin) {
+  int soundValue = digitalRead(sensorPin);
+  currentNoiseTime = millis();
+  if (soundValue == 1)
+  { // if there is currently a noise
+      if (
+          (currentNoiseTime &gt; lastNoiseTime + 200) &amp;&amp;
+          (lastSoundValue == 0) &amp;&amp;                    
+          (currentNoiseTime &lt; lastNoiseTime + 800) &amp;&amp; 
+          (currentNoiseTime &gt; lastLightChange + 1000) 
+         )
+      {
+        \*signalToRelayPin = !(*signalToRelayPin);
+        lastLightChange = currentNoiseTime;
+      }
+      lastNoiseTime = currentNoiseTime;
+  }
+  lastSoundValue = soundValue;
+}</pre>
+
+</div>
+
+<h5 id="citire_date_telecomanda_ir">Citire date telecomanda IR</h5>
+<div class="level5">
+
+<p>
+Primeste comenzi de la telecomanda si in functie de acestea seteaza variabilele necesare
+Pentru a nu citi prea rapid comenzi si nu a trimite date prea des la baza de date an facut un delay 
+pentru fiecare folosind functia millis()
+</p>
+<pre class="code">  if (IrReceiver.decode()) {
+  IrReceiver.resume();
+  irCommand = IrReceiver.decodedIRData.command;
+  if (millis() - debouncing_delay &gt; 200){
+    
+    // up
+    if (irCommand == 64) {
+      room1.relay1 = !room1.relay1;
+      relayStatus = true;
+    }
+    // ok
+    if (irCommand == 70) {
+      room1.relay2 = !room1.relay2;
+      relayStatus = true;
+    }
+    // #
+    if (irCommand == 74) {
+      room1.alarm = !room1.alarm;
+      digitalWrite(BUZZER_PIN, room1.alarm);
+      if (mainBox.deactivate_alarm) {
+        digitalWrite(BUZZER_PIN, LOW);
+      }
+      update_db_buzzer = 1;
+    }
+    
+    ................
+    
+    debouncing_delay = millis();
+    irCommand = 0;      
+  }
+  update_db_time = millis();
+}</pre>
+
+</div>
+
+<h5 id="citire_si_scriere_eeprom_pe_arduino_nano">Citire si scriere EEPROM pe Arduino Nano</h5>
+<div class="level5">
+
+<p>
+Parola si cartelele sunt salvate in eeprom pentru a nu pierde informatia la resetare.
+</p>
+<pre class="code"> 
+ 
+if (EEPROM.read(EE_START_ADDR) == KEY_DATA)
+{
+  savedTags = EEPROM.read(EE_START_ADDR + ADDRESS_TAGS);
+} // Verify if EEPROM contain key data, clear the memory if not
+else
+{
+  for (int i = 0; i &lt; EEPROM.length(); i++)
+  {
+    EEPROM.update(i, 0x00);
+  }
+  for (int i = 0; i &lt; 6; i++)
+  { // Writing a default password when first time uploading
+    EEPROM.update(i + 6, '1');
+  }
+}
+EEPROM.update(EE_START_ADDR, KEY_DATA);</pre>
+<pre class="code">for (int i = 0; i &lt; 6; i++)
+{
+  compPassword[i] = EEPROM.read(i + PASSWORD_ADDRESS); // Reading the password from EEPROM
+  Serial.print(compPassword[i]);
+}</pre>
+
+</div>
+
+<h5 id="stergerescriere_cartele">Stergere/Scriere cartele</h5>
+<div class="level5">
+<pre class="code">// Adding and deleting new tag in/from EEPROM
+bool saveOrDeleteTag(uint8_t *tag, uint8_t size)
+{
+   int16_t tagAddr = foundTag(tag, size);                      // search the tag
+   uint16_t newTagAddr = (savedTags * 8) + EE_START_ADDR + ADDRESS_TAGS; // last tag addres
+   if (tagAddr &gt;= 0)
+   { // deleting the tag
+      for (uint8_t i = 0; i &lt; 8; i++)
+      {
+        EEPROM.write(tagAddr + i, 0x00);                              // deleting old tag
+        EEPROM.write(tagAddr + i, EEPROM.read((newTagAddr - 8) + i)); // writing new tag
+        EEPROM.write((newTagAddr - 8) + i, 0x00);
+      }
+      EEPROM.write(EE_START_ADDR + 1, savedTags --); // write in EEPROM number of tags
+      return false;
+    }
+    else if (savedTags &lt; MAX_TAGS)
+    {
+      for (uint16_t i = 0; i &lt; size; i++)
+      EEPROM.write(i + newTagAddr, tag[i]);       // write new tag
+      EEPROM.write(EE_START_ADDR + 1, ++savedTags); // write number of tags
+    }
+    else
+    {
+      return false;
+    }
+    return true;
+}</pre>
+
+</div>
+
+<h5 id="poze_aplicatie">Poze aplicatie</h5>
+<div class="level5">
+
+<p>
+<a href="https://ocw.cs.pub.ro/courses/_detail/pm/prj2024/vstoica/dragos.coscodan_room_2.jpg?id=pm%3Aprj2024%3Avstoica%3Adragos.coscodan" class="media" title="pm:prj2024:vstoica:dragos.coscodan_room_2.jpg"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/dragos.coscodan_room_2.jpg" class="media" alt="" width="400"></a>
+</p>
+
+<p>
+<a href="https://ocw.cs.pub.ro/courses/_detail/pm/prj2024/vstoica/dragos.coscodan_power_measure.jpg?id=pm%3Aprj2024%3Avstoica%3Adragos.coscodan" class="media" title="pm:prj2024:vstoica:dragos.coscodan_power_measure.jpg"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/dragos.coscodan_power_measure.jpg" class="media" alt="" width="400"></a>
+</p>
+
+</div>
+
+<h2 class="sectionedit9" id="rezultate_obtinute">Rezultate Obţinute</h2>
+<div class="level2">
+
+<p>
+<strong>Inchidere Usa:</strong>
+</p>
+<pre class="code">  Introducere parola pe numpad pentru a deschide usa;
+  Apropiere cartela pentru a deschide usa;
+  Cand usa este deschisa tastare "***" pentru a intra in meniul de setari
+  unde putem schimba parola, limba(RO, EN, FR), adauga/sterge cartele;
+  Usa se incuie automat dupa cateva secunde daca este inchisa.</pre>
+
+<p>
+<strong>Cutie 1 si 2:</strong>
+</p>
+<pre class="code">  Afisare temperatura, umiditate, calitate aer pe telefon;
+  Activare/dezactivare becuri, prize, alarma de la telecomanda sau telefon;
+  Aprinde/stinge luminile, batand de doua ori din palme;
+  Aprinde lumina daca intensitatea luminii este mai mica de un prag;
+  Activare/Dezactivare becuri, prize, alarma intrun anumit interval;
+  Setare intensitate lumina de la telecomanda sau din aplicatie;
+  Afisare curent consumat in aplicatie;
+  Activare alarma daca cineva a patruns in casa sau daca calitatea aerului este rea;
+  Afisare status cutii utilizand ledurile montate.
+  
+  </pre>
+
+<p>
+<a href="https://youtu.be/betq2JxMFPk?si=Z8a8zUScWK3Z1pHi" class="urlextern" title="https://youtu.be/betq2JxMFPk?si=Z8a8zUScWK3Z1pHi" rel="nofollow">Video 1</a>
+<a href="https://youtube.com/shorts/bQj4MoAs6Ao?si=cfGHVuRVleRzV3eR" class="urlextern" title="https://youtube.com/shorts/bQj4MoAs6Ao?si=cfGHVuRVleRzV3eR" rel="nofollow">Video 2</a>
+<a href="https://youtube.com/shorts/dKRBe61gDRw?si=bTGLbOu1wot8lc-2" class="urlextern" title="https://youtube.com/shorts/dKRBe61gDRw?si=bTGLbOu1wot8lc-2" rel="nofollow">Video 3</a>
+</p>
+
+</div>
+
+<h2 class="sectionedit10" id="download">Download</h2>
+<div class="level2">
+
+<p>
+<a href="https://ocw.cs.pub.ro/courses/_media/pm/prj2024/vstoica/dragos.coscodan.smart_home.zip" class="media mediafile mf_zip" title="pm:prj2024:vstoica:dragos.coscodan.smart_home.zip (532.9 KB)">dragos.coscodan.smart_home.zip</a>
+</p>
+
+</div>
+
+<h2 class="sectionedit11" id="bibliografieresurse">Bibliografie/Resurse</h2>
+<div class="level2">
+
+<p>
+<strong>Resurse Software:
+</strong>
+</p>
+
+<p>
+<a href="https://randomnerdtutorials.com/esp32-pwm-arduino-ide/" class="urlextern" title="https://randomnerdtutorials.com/esp32-pwm-arduino-ide/" rel="nofollow">https://randomnerdtutorials.com/esp32-pwm-arduino-ide/</a>
+</p>
+
+<p>
+<a href="https://medium.com/@khantalha7367/uart-communication-on-esp32-28fd3df3b6eb" class="urlextern" title="https://medium.com/@khantalha7367/uart-communication-on-esp32-28fd3df3b6eb" rel="nofollow">https://medium.com/@khantalha7367/uart-communication-on-esp32-28fd3df3b6eb</a>
+</p>
+
+<p>
+<a href="https://randomnerdtutorials.com/esp32-esp8266-firebase-authentication/" class="urlextern" title="https://randomnerdtutorials.com/esp32-esp8266-firebase-authentication/" rel="nofollow">https://randomnerdtutorials.com/esp32-esp8266-firebase-authentication/</a>
+</p>
+
+<p>
+<a href="https://developer.android.com/" class="urlextern" title="https://developer.android.com/" rel="nofollow">https://developer.android.com/</a>
+</p>
+
+<p>
+<strong>Resurse Hardware:</strong>
+</p>
+
+<p>
+<a href="https://randomnerdtutorials.com/esp32-pinout-reference-gpios/" class="urlextern" title="https://randomnerdtutorials.com/esp32-pinout-reference-gpios/" rel="nofollow">https://randomnerdtutorials.com/esp32-pinout-reference-gpios/</a>
+</p>
+
+<p>
+<a href="https://www.instructables.com/AC-PWM-Dimmer-for-Arduino/" class="urlextern" title="https://www.instructables.com/AC-PWM-Dimmer-for-Arduino/" rel="nofollow">https://www.instructables.com/AC-PWM-Dimmer-for-Arduino/</a>
+</p>
+
+<p>
+<a href="https://diyprojectslab.com/measure-ac-current-using-arduino-and-sct-013/" class="urlextern" title="https://diyprojectslab.com/measure-ac-current-using-arduino-and-sct-013/" rel="nofollow">https://diyprojectslab.com/measure-ac-current-using-arduino-and-sct-013/</a>
+</p>
+
+<p>
+<a class="media mediafile mf_pdf" href="https://ocw.cs.pub.ro/courses/pm/prj2024/vstoica/dragos.coscodan?do=export_pdf">Export to PDF</a>
+</p>
+
+</div>
+
+        </div>
+        <div class="right_sidebar">
+          <form action="/courses/start" accept-charset="utf-8" class="search" id="dw__search" method="get"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Search" class="button" title="Search"><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>          <div class="namespace_sidebar sidebar_box">
+
+<h1 class="sectionedit1" id="administrativ">Administrativ</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/pm/lab/regulament" class="wikilink1" title="pm:pm:lab:regulament"> Regulament</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/pm/lab/planificare" class="wikilink1" title="pm:pm:lab:planificare"> Planificare si orar</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/administrative/catalog" class="wikilink1" title="pm:administrative:catalog"> Catalog PM</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/administrative/echipapm" class="wikilink1" title="pm:administrative:echipapm"> Echipa PM</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT1 SECTION "Administrativ" [1-217] -->
+<h1 class="sectionedit2" id="cursuri_ca">Cursuri CA</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/cursuri/curs0" class="wikilink1" title="pm:cursuri:curs0"> Cursul 0 &amp; 1. Intro</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/cursuri/curs1" class="wikilink1" title="pm:cursuri:curs1"> Cursul 2. Debugging, UART</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/cursuri/curs2" class="wikilink1" title="pm:cursuri:curs2"> Cursul 3. Întreruperi</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/cursuri/curs3" class="wikilink1" title="pm:cursuri:curs3"> Cursul 4. Timere. PWM. RTC</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/cursuri/curs4" class="wikilink1" title="pm:cursuri:curs4"> Cursul 5. ADC. Comparatoare Analogice</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/cursuri/curs5" class="wikilink1" title="pm:cursuri:curs5"> Cursul 6. SPI/QSPI</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/cursuri/curs6" class="wikilink1" title="pm:cursuri:curs6"> Cursul 7. I2C. I3C. I2S</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/cursuri/curs7" class="wikilink1" title="pm:cursuri:curs7"> Cursul 8. USB. CAN. MODBUS</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/cursuri/curs8" class="wikilink1" title="pm:cursuri:curs8"> Cursul 9. BLE. WiFi. LTE</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/cursuri/curs9" class="wikilink1" title="pm:cursuri:curs9"> Cursul 10. Power Management</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/cursuri/curs10" class="wikilink1" title="pm:cursuri:curs10"> Cursul 11. RTOS</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/cursuri/curs11" class="wikilink1" title="pm:cursuri:curs11"> Cursul 12. Case study: Wearable Computing</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/cursuri/curs12" class="wikilink1" title="pm:cursuri:curs12"> Cursul 13. Case Study: IoT</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT2 SECTION "Cursuri CA" [218-939] -->
+<h1 class="sectionedit3" id="laborator">Laborator</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/lab/lab0-2023" class="wikilink1" title="pm:lab:lab0-2023"> Laboratorul 0: GPIO</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/lab/lab1-2023" class="wikilink1" title="pm:lab:lab1-2023"> Laboratorul 1: UART</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/lab/lab2-2023" class="wikilink1" title="pm:lab:lab2-2023"> Laboratorul 2: Întreruperi</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/lab/lab3-2023-2024" class="wikilink1" title="pm:lab:lab3-2023-2024"> Laboratorul 3: Timere. PWM</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/lab/lab4-2023-2024" class="wikilink1" title="pm:lab:lab4-2023-2024"> Laboratorul 4: ADC</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/lab/lab5-2023-2024" class="wikilink1" title="pm:lab:lab5-2023-2024"> Laboratorul 5: SPI</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/lab/lab6-2023-2024" class="wikilink1" title="pm:lab:lab6-2023-2024"> Laboratorul 6: I2C</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT3 SECTION "Laborator" [940-1326] -->
+<h1 class="sectionedit4" id="proiecte">Proiecte</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/halloffame" class="wikilink1" title="pm:halloffame"> Hall of Fame (Proiecte bune)</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/roomofinspiration" class="wikilink1" title="pm:roomofinspiration"> Room of inspiration (Idei de proiecte)</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/cablaj/proiect2019" class="wikilink1" title="pm:cablaj:proiect2019"> Cablaj PM 2019</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/workflow" class="wikilink1" title="pm:workflow"> Workflow proiecte</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/prj2019" class="wikilink1" title="pm:prj2019"> Pagina de proiecte 2019</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/prj2021" class="wikilink1" title="pm:prj2021"> Pagina de proiecte 2021</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/prj2022" class="wikilink1" title="pm:prj2022"> Pagina de proiecte 2022</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/pm/prj2023" class="wikilink1" title="pm:prj2023"> Pagina de proiecte 2023</a></div>
+</li>
+<li class="level1"><div class="li"> <strong><a href="https://ocw.cs.pub.ro/courses/pm/prj2024" class="wikilink1" title="pm:prj2024"> Pagina de proiecte 2024</a></strong></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT4 SECTION "Proiecte" [1327-1790] -->
+<h1 class="sectionedit5" id="resurse">Resurse</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/_media/pm/doc8272.pdf" class="media mediafile mf_pdf" title="pm:doc8272.pdf (23.7 MB)"> Datasheet ATmega324A</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/_media/pm/diverse/pm_cheatsheet_2020.pdf" class="media mediafile mf_pdf" title="pm:diverse:pm_cheatsheet_2020.pdf (562.3 KB)"> Software Cheatsheet ATmega324A</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/_media/pm/hardware-cheatsheet.pdf" class="media mediafile mf_pdf" title="pm:hardware-cheatsheet.pdf (340 KB)"> Hardware Cheatsheet ATmega324A</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/_media/pm/bootloader_2019.zip" class="media mediafile mf_zip" title="pm:bootloader_2019.zip (184.6 KB)"> Bootloader USB 2019</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/_media/pm/bootloader_2015.zip" class="media mediafile mf_zip" title="pm:bootloader_2015.zip (186.9 KB)"> Bootloader USB 2018</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/_media/pm/placa_lab_2018.pdf" class="media mediafile mf_pdf" title="pm:placa_lab_2018.pdf (110.4 KB)"> Schema placa laborator</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT5 SECTION "Resurse" [1791-2163] -->
+<h1 class="sectionedit6" id="tutoriale">Tutoriale</h1>
+<div class="level1">
+
+<div><div id="nojs_indexmenu_81706841066fe67ecd64a0" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx">
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/tutorial/biti" class="wikilink1" title="pm:tutorial:biti">Lucrul cu registrele la nivel de bit</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/tutorial/bootloader" class="wikilink1" title="pm:tutorial:bootloader">Ghid folosire Bootloader USB</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/tutorial/corodat" class="wikilink1" title="pm:tutorial:corodat">Ghid realizare plăcuțe cablate pentru montaje (clorură ferică)</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/tutorial/datasheet" class="wikilink1" title="pm:tutorial:datasheet">Ghid folosire datasheet</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/tutorial/isp" class="wikilink1" title="pm:tutorial:isp">Programarea cu ISP și AVR Studio</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/tutorial/placa" class="wikilink1" title="pm:tutorial:placa">Etape realizare plăcuța de baza Proiect PM</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/tutorial/placute" class="wikilink1" title="pm:tutorial:placute">Recomandări Proiect</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/tutorial/proiect" class="wikilink1" title="pm:tutorial:proiect">Ghid proiect etapa 2</a></div></li>
+</ul>
+</div></div>
+
+</div>
+<!-- EDIT6 SECTION "Tutoriale" [2164-2218] -->
+<h1 class="sectionedit7" id="cablaje">Cablaje</h1>
+<div class="level1">
+
+<div><div id="nojs_indexmenu_60534800266fe67ecd7424" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx">
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/cablaj/proiect2009" class="wikilink1" title="pm:cablaj:proiect2009">Cablaj imprimat 2009</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/cablaj/proiect2010" class="wikilink1" title="pm:cablaj:proiect2010">Cablaj imprimat 2010</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/cablaj/proiect2011" class="wikilink1" title="pm:cablaj:proiect2011">Cablaj imprimat 2011</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/cablaj/proiect2012" class="wikilink1" title="pm:cablaj:proiect2012">Cablaj imprimat 2012</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/cablaj/proiect2013" class="wikilink1" title="pm:cablaj:proiect2013">Cablaj imprimat 2013</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/cablaj/proiect2014" class="wikilink1" title="pm:cablaj:proiect2014">Cablaj imprimat 2014</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/cablaj/proiect2015" class="wikilink1" title="pm:cablaj:proiect2015">Cablaj imprimat 2015</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/cablaj/proiect2016" class="wikilink1" title="pm:cablaj:proiect2016">Cablaj imprimat 2016</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/cablaj/proiect2017" class="wikilink1" title="pm:cablaj:proiect2017">Cablaj imprimat 2017</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/cablaj/proiect2018" class="wikilink1" title="pm:cablaj:proiect2018">Cablaj imprimat 2018</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/cablaj/proiect2019" class="wikilink1" title="pm:cablaj:proiect2019">Cablaj imprimat 2019</a></div></li>
+</ul>
+</div></div>
+
+</div>
+<!-- EDIT7 SECTION "Cablaje" [2219-2268] -->
+<h1 class="sectionedit8" id="galerie_foto">Galerie Foto</h1>
+<div class="level1">
+
+<div><div id="nojs_indexmenu_34449037166fe67ecd83e4" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx">
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/poze/lf2010" class="wikilink1" title="pm:poze:lf2010">Concurs line-followeri 2010</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/poze/plac2009" class="wikilink1" title="pm:poze:plac2009">Plăcuțiada 2009</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/poze/plac2010" class="wikilink1" title="pm:poze:plac2010">Plăcuțiada 2010</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/poze/plac2011" class="wikilink1" title="pm:poze:plac2011">Plăcuțiada 2011</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/poze/plac2012" class="wikilink1" title="pm:poze:plac2012">Plăcuțiada 2012</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/poze/prj2010" class="wikilink1" title="pm:poze:prj2010">Câteva proiecte din 2010</a></div></li>
+</ul>
+</div></div>
+
+</div>
+<!-- EDIT8 SECTION "Galerie Foto" [2269-2321] -->
+<h1 class="sectionedit9" id="tutoriale_galileo">Tutoriale Galileo</h1>
+<div class="level1">
+
+<div><div id="nojs_indexmenu_155387860966fe67ecd8fb9" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx">
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/galileo/1" class="wikilink1" title="pm:galileo:1">Introduction to microcontrollers, Arduino and Galileo</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/galileo/2" class="wikilink1" title="pm:galileo:2">Working within the Galileo environment</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/pm/galileo/3" class="wikilink1" title="pm:galileo:3">An Actual Galileo application: An EKG Device</a></div></li>
+</ul>
+</div></div>
+
+</div>
+<!-- EDIT9 SECTION "Tutoriale Galileo" [2322-] -->
+</div>
+<div class="toc_sidebar sidebar_box">
+<!-- TOC START -->
+<div id="sb__right__dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#smart_home_box">Smart Home box</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#introducere">Introducere</a></div></li>
+<li class="level2"><div class="li"><a href="#descriere_generala">Descriere generală</a></div></li>
+<li class="level2"><div class="li"><a href="#hardware_design">Hardware Design</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#lista_piese">Lista piese:</a></div></li>
+<li class="level3"><div class="li"><a href="#scheme_electrice">Scheme electrice</a></div>
+<ul class="toc">
+<li class="level4"><div class="li"><a href="#main_box_box_1">Main Box + Box 1</a></div></li>
+<li class="level4"><div class="li"><a href="#interfon_camera">Interfon + Camera</a></div></li>
+<li class="level4"><div class="li"><a href="#box_2">Box 2</a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#software_design">Software Design</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#descrierea_codului_aplicatiei">Descrierea codului aplicaţiei:</a></div>
+<ul class="toc">
+<li class="level4"><div class="li"><a href="#baza_de_date">Baza de date</a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#rezultate_obtinute">Rezultate Obţinute</a></div></li>
+<li class="level2"><div class="li"><a href="#download">Download</a></div></li>
+<li class="level2"><div class="li"><a href="#bibliografieresurse">Bibliografie/Resurse</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+</div>
+        </div>
+      
+    
+      <div class="stylefoot">
+        <div class="meta">
+          <div class="user">
+                    </div>
+          <div class="doc">
+          pm/prj2024/vstoica/dragos.coscodan.txt · Last modified: 2024/05/30 23:53 by dragos.coscodan          </div>
+        </div>
+      </div>
+
+    <div class="clearer"></div>
+
+    
+                <div class="bar" id="bar__bottom">
+      <div class="bar-left">
+        <a href="https://ocw.cs.pub.ro/courses/pm/prj2024/vstoica/dragos.coscodan?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]">Old revisions</a>      </div>
+      <div class="bar-right">
+        <a href="https://ocw.cs.pub.ro/courses/pm/prj2024/vstoica/dragos.coscodan?do=media&amp;ns=pm%3Aprj2024%3Avstoica" class="action media" rel="nofollow" title="Media Manager">Media Manager</a><a href="#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]">Back to top</a>      </div>
+    </div>
+    <div class="clearer"></div>
+            
+    <div align="center" class="footerinc">
+  <div class="license"><a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/cc-by-sa.png" alt="CC Attribution-Share Alike 3.0 Unported"></a></div>
+  <a target="_blank" href="http://www.chimeric.de/" title="www.chimeric.de"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/button-chimeric-de.png" width="80" height="15" alt="www.chimeric.de" border="0"></a>
+
+  <a target="_blank" href="http://jigsaw.w3.org/css-validator/check/referer" title="Valid CSS"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/button-css.png" width="80" height="15" alt="Valid CSS" border="0"></a>
+
+  <a target="_blank" href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" border="0"></a>
+
+  <a target="_blank" href="http://www.firefox-browser.de/" title="do yourself a favour and use a real browser - get firefox"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/button-firefox.png" width="80" height="15" alt="do yourself a favour and use a real browser - get firefox!!" border="0"></a>
+  
+  <a target="_blank" href="https://ocw.cs.pub.ro/courses/feed.php" title="Recent changes RSS feed"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" border="0"></a>
+
+  <a target="_blank" href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/button-xhtml.png" width="80" height="15" alt="Valid XHTML 1.0" border="0"></a>
+</div>
+
+  </div>
+</div>
+
+<div class="no"><img src="Smart%20Home%20box%20[CS%20Open%20CourseWare]_files/indexer.gif" width="2" height="1" alt=""></div>
+
+
+<div at-magnifier-wrapper=""><div class="at-theme-light"><div class="at-base notranslate" translate="no"><div class="EuwGd" style="top: 0px; left: 0px;"></div></div></div></div></body></html>
